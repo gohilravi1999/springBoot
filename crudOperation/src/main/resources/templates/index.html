@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"/>
+<title>Product Manager</title>
+</head>
+<body>
+<div align="center">
+    <h1>Product List</h1>
+    <a href="/new">Create New Product</a>
+    <br/><br/>
+    <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <th>Student ID</th>
+                <th>Name</th>
+                <th>Marks</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="student : ${listStudents}">
+                <td th:text="${student.id}">Student ID</td>
+                <td th:text="${student.name}">Name</td>
+                <td th:text="${student.marks}">Marks</td>
+                <td>
+                    <a th:href="@{/delete/{id}(id=${student.id})}">Delete</a>
+                    &nbsp;&nbsp;&nbsp;
+                    <a th:href="@{/edit/{id}(id=${student.id})}">Edit</a>
+                    
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>    
+</body>
+</html>

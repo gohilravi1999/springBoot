@@ -1,0 +1,1 @@
+insert into REGISTRATION_USERS (username,firstName,lastName,mobile,email) values ("Ravi199","Raviraj","Gohil","6951417898","gohilravi1@gmail.com");

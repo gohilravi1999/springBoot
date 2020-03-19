@@ -53,7 +53,7 @@ public class AppSecurityConfig extends WebSecurityConfigurerAdapter
 		.and()
 		.logout().invalidateHttpSession(true)
 		.clearAuthentication(true)
-		.logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
+	.logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
 		.logoutSuccessUrl("/logout-success").permitAll();
 		
 	}
